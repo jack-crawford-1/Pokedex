@@ -13,7 +13,7 @@ import GenOneNames from './components/GenOneNames'
 import GenTwo from './components/GenTwo'
 import GenTwoNames from './components/GenTwoNames'
 import GenOneTypes from './components/GenOneTypes'
-import GenTwoLocations from './components/GenTwoLocations'
+import GenTwoLocations from './components/GenTwoTypes'
 
 const router = createBrowserRouter(
   createRoutesFromElements([
@@ -29,7 +29,7 @@ const router = createBrowserRouter(
       <Route path="/generations/gen-two" element={<GenTwo />} />
       <Route path="/generations/gen-two/names/:id" element={<GenTwoNames />} />
       <Route
-        path="/generations/gen-two/locations"
+        path="/generations/gen-two/types/:id"
         element={<GenTwoLocations />}
       />
 

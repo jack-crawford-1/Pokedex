@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 
 function GenOne() {
+  const id = 1
+
   return (
     <div>
       <h2>First Sub page</h2>
@@ -9,7 +11,7 @@ function GenOne() {
         <Link to="/">Home</Link>
       </button>
       <button>
-        <Link to="/generations/gen-one/names"> Generation 1 Names</Link>
+        <Link to={`/generations/gen-one/names/${id}`}> Generation 1 Names</Link>
       </button>
       <button>
         <Link to="/generations/gen-one/locations"> Generation 1 Locations</Link>

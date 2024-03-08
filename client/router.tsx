@@ -23,14 +23,20 @@ const router = createBrowserRouter(
         <Route path="/generations" element={<Generations />} />
 
         <Route path="/generations/gen-one" element={<GenOne />} />
-        <Route path="/generations/gen-one/names" element={<GenOneNames />} />
+        <Route
+          path="/generations/gen-one/names/:id"
+          element={<GenOneNames />}
+        />
         <Route
           path="/generations/gen-one/locations"
           element={<GenOneLocations />}
         />
 
         <Route path="/generations/gen-two" element={<GenTwo />} />
-        <Route path="/generations/gen-two/names" element={<GenTwoNames />} />
+        <Route
+          path="/generations/gen-two/names/:id"
+          element={<GenTwoNames />}
+        />
         <Route
           path="/generations/gen-two/locations"
           element={<GenTwoLocations />}

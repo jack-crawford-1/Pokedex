@@ -1,20 +1,41 @@
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { fetchPokemonGeneration } from '../apis/Pokemon'
+import { useQuery } from '@tanstack/react-query'
 
 function GenOneNames() {
+  const { id } = useParams()
+
+  if (id === undefined) {
+    return <p>No ID provided</p>
+  }
+  const {
+    isPending,
+    isError,
+    data: pokemonByGeneration,
+  } = useQuery({
+    queryKey: ['bananas'],
+    queryFn: async () => fetchPokemonGeneration(Number(id)),
+  })
+
+  if (isPending) {
+    return <p>pending</p>
+  }
+  if (isError) {
+    return <p>Something went wrong sorry</p>
+  } else if (!pokemonByGeneration) {
+    return <p>Loading...</p>
+  }
   return (
-    <div>
-      <button>
-        <Link to="/">Home</Link>
-      </button>
-      <h2>this is sub of a sub</h2>
-      <p>A list of Pokemon names to go here</p>
-      <p>EG: </p>
+    <>
+      <h2>Pokémon in {pokemonByGeneration.main_region.name}:</h2>
       <ul>
-        <li>Charmander</li>
-        <li>Bulbasaur</li>
-        <li>Sparrow</li>
+        {pokemonByGeneration.pokemon_species.map((p) => (
+          <li key={p.url}>
+            <Link to={`/pokemon/${p.name}`}>{p.name}</Link>
+          </li>
+        ))}
       </ul>
-    </div>
+    </>
   )
 }
 

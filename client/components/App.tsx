@@ -1,10 +1,5 @@
-function App() {
-  return (
-    <div>
-      <h1>App</h1>
-      <p>React development has begun!</p>
-    </div>
-  )
-}
+// function App() {
+//   return <h2>Hello</h2>
+// }
 
-export default App
+// export default App

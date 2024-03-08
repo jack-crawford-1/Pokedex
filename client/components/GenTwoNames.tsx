@@ -25,7 +25,7 @@ function GenTwoNames() {
   } else if (!pokemonByGeneration) {
     return <p>Loading...</p>
   }
-  console.log(pokemonByGeneration)
+
   return (
     <>
       <button>

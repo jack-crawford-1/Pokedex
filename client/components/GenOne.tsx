@@ -10,11 +10,13 @@ function GenOne() {
       <button>
         <Link to="/">Home</Link>
       </button>
+
       <button>
         <Link to={`/generations/gen-one/names/${id}`}> Generation 1 Names</Link>
       </button>
+
       <button>
-        <Link to="/generations/gen-one/locations"> Generation 1 Locations</Link>
+        <Link to={`/generations/gen-one/types/${id}`}> Generation 1 Types</Link>
       </button>
     </div>
   )

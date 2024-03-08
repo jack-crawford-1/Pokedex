@@ -2,9 +2,8 @@ import { Link, useParams } from 'react-router-dom'
 import { fetchPokemonGeneration } from '../apis/Pokemon'
 import { useQuery } from '@tanstack/react-query'
 
-function GenOneNames() {
+function GenOneTypes() {
   const { id } = useParams()
-  // console.log(id)
 
   if (id === undefined) {
     return <p>No ID provided</p>
@@ -29,18 +28,16 @@ function GenOneNames() {
     return <p>Loading...</p>
   }
 
-  console.log(pokemonByGeneration.types)
-
   return (
     <>
       <button>
         <Link to="/">Home</Link>
       </button>
-      <h2>Pokémon in {pokemonByGeneration.main_region.name}:</h2>
+      <h2>Pokémon Types {pokemonByGeneration.main_region.name}:</h2>
       <ul>
-        {pokemonByGeneration.pokemon_species.map((p) => (
-          <li key={p.url}>
-            <Link to={`/pokemon/${p.name}`}>{p.name}</Link>
+        {pokemonByGeneration.types.map((type) => (
+          <li key={type.url}>
+            <Link to={`/pokemon/${type.name}`}>{type.name}</Link>
           </li>
         ))}
       </ul>
@@ -48,4 +45,4 @@ function GenOneNames() {
   )
 }
 
-export default GenOneNames
+export default GenOneTypes

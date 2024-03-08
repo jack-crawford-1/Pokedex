@@ -9,7 +9,7 @@ function GenTwo() {
         <Link to="/">Home</Link>
       </button>
       <button>
-        <Link to="/generations/gen-two/names"> Generation 2 Names</Link>
+        <Link to="/generations/gen-two/names/2"> Generation 2 Names</Link>
       </button>
       <button>
         <Link to="/generations/gen-two/locations"> Generation 2 Locations</Link>

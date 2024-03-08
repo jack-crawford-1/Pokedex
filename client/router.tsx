@@ -18,33 +18,27 @@ import GenTwoLocations from './components/GenTwoLocations'
 const router = createBrowserRouter(
   createRoutesFromElements([
     <>
-      <Route>
-        <Route path="/" element={<Home />} />
-        <Route path="/generations" element={<Generations />} />
+      {/* <Route> */}
+      <Route path="/" element={<Home />} />
+      <Route path="/generations" element={<Generations />} />
 
-        <Route path="/generations/gen-one" element={<GenOne />} />
-        <Route
-          path="/generations/gen-one/names/:id"
-          element={<GenOneNames />}
-        />
-        <Route
-          path="/generations/gen-one/locations"
-          element={<GenOneLocations />}
-        />
+      <Route path="/generations/gen-one" element={<GenOne />} />
+      <Route path="/generations/gen-one/names/:id" element={<GenOneNames />} />
+      <Route
+        path="/generations/gen-one/locations"
+        element={<GenOneLocations />}
+      />
 
-        <Route path="/generations/gen-two" element={<GenTwo />} />
-        <Route
-          path="/generations/gen-two/names/:id"
-          element={<GenTwoNames />}
-        />
-        <Route
-          path="/generations/gen-two/locations"
-          element={<GenTwoLocations />}
-        />
+      <Route path="/generations/gen-two" element={<GenTwo />} />
+      <Route path="/generations/gen-two/names/:id" element={<GenTwoNames />} />
+      <Route
+        path="/generations/gen-two/locations"
+        element={<GenTwoLocations />}
+      />
 
-        <Route path="/second" element={<Second />} />
-        <Route path="/third" element={<Third />} />
-      </Route>
+      <Route path="/second" element={<Second />} />
+      <Route path="/third" element={<Third />} />
+      {/* </Route> */}
     </>,
   ])
 )

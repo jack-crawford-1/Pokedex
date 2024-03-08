@@ -13,7 +13,7 @@ function GenOneNames() {
     isError,
     data: pokemonByGeneration,
   } = useQuery({
-    queryKey: ['bananas'],
+    queryKey: ['pokemon-GenOne'],
     queryFn: async () => fetchPokemonGeneration(Number(id)),
   })
 
@@ -27,6 +27,9 @@ function GenOneNames() {
   }
   return (
     <>
+      <button>
+        <Link to="/">Home</Link>
+      </button>
       <h2>Pokémon in {pokemonByGeneration.main_region.name}:</h2>
       <ul>
         {pokemonByGeneration.pokemon_species.map((p) => (

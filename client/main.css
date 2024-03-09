@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  cursor: url('./images/pokeball.png'), auto;
 }
 
 .outer-container {
@@ -126,4 +127,91 @@ ul {
 
 .moves-content {
   font-size: 1.5rem;
+}
+
+.homepage,
+.generations {
+  background-image: url('./images/poke.jpeg');
+  height: 850px;
+  margin-left: 170px;
+}
+
+.homepage h1 {
+  font-size: 5rem;
+  text-align: left;
+}
+
+.homepage h2 {
+  font-size: 2rem;
+  text-align: left;
+  margin-left: -50px;
+  margin-top: -20px;
+  margin-bottom: 70px;
+}
+
+.generations h2 {
+  font-size: 3rem;
+  text-align: left;
+  margin-left: -50px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  text-transform: capitalize;
+}
+
+.generations p {
+  width: 30%;
+  margin-bottom: 40px;
+}
+
+.generations h3 {
+  font-size: 1.4rem;
+  margin-left: -120px;
+}
+
+.homepage a,
+.generations a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-family: monospace;
+}
+
+.homepage button,
+.generations button {
+  height: 50px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #3c5aa6;
+  border-radius: 10px;
+  margin: 20px;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.homepage button:hover,
+.generations button:hover {
+  background-color: #be1b1b;
+}
+
+.genOne a {
+  color: #2c2b2b;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-family: monospace;
+  transition: all 1000m;
+}
+
+.genOne a:hover {
+  color: #3c5aa6;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  cursor: url('./images/pokeball.png');
+}
+
+.getOne h2 {
+  margin-top: 210px;
 }

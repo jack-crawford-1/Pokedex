@@ -30,17 +30,19 @@ function GenOneTypes() {
 
   return (
     <>
-      <button>
-        <Link to="/">Home</Link>
-      </button>
-      <h2>Pokémon Types {pokemonByGeneration.main_region.name}:</h2>
-      <ul>
-        {pokemonByGeneration.types.map((type) => (
-          <li key={type.url}>
-            <Link to={`/pokemon/${type.name}`}>{type.name}</Link>
-          </li>
-        ))}
-      </ul>
+      <div className="generations genOne">
+        <Link to="/">
+          <button>Home</button>
+        </Link>
+        <h2>Pokémon Types {pokemonByGeneration.main_region.name}:</h2>
+        <ul>
+          {pokemonByGeneration.types.map((type) => (
+            <li key={type.url}>
+              <Link to={`/pokemon/${type.name}`}>{type.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   )
 }

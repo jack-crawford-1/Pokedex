@@ -4,20 +4,23 @@ function GenOne() {
   const id = 1
 
   return (
-    <div>
-      <h2>First Sub page</h2>
-      <p>Some text for the first sub page</p>
-      <button>
-        <Link to="/">Home</Link>
-      </button>
+    <div className="generations">
+      <h2>Kanto</h2>
+      <p>
+        The Kanto region (Japanese: カントー地方 Kanto region) is a region of
+        the Pokémon world. Kanto is located east of Johto, which together form a
+        joint landmass that is south of Sinnoh.
+      </p>
 
-      <button>
-        <Link to={`/generations/gen-one/names/${id}`}> Generation 1 Names</Link>
-      </button>
-
-      <button>
-        <Link to={`/generations/gen-one/types/${id}`}> Generation 1 Types</Link>
-      </button>
+      <Link to="/">
+        <button>Home</button>
+      </Link>
+      <Link to={`/generations/gen-one/names/${id}`}>
+        <button>Kanto Pokèmon</button>
+      </Link>
+      <Link to={`/generations/gen-one/types/${id}`}>
+        <button>Pokèmon Types</button>
+      </Link>
     </div>
   )
 }

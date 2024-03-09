@@ -2,21 +2,25 @@ import { Link } from 'react-router-dom'
 
 function Home() {
   return (
-    <div>
-      <h1>Practice App Main Section</h1>
-      <p>React Query</p>
-      <button>
-        <Link to="/">Home</Link>
-      </button>
-      <button>
-        <Link to="/Generations">Generations</Link>
-      </button>
-      <button>
-        <Link to="/Second">Second</Link>
-      </button>
-      <button>
-        <Link to="/Third">Third</Link>
-      </button>
+    <div className="homepage">
+      <h1>Pokèdex</h1>
+      <h2>Using React Query and the Pokè API</h2>
+      <div className="gen-btn">
+        <Link to="/">
+          <button>Home</button>
+        </Link>
+
+        <Link to="/Generations">
+          <button>Regions</button>
+        </Link>
+
+        <Link to="Second">
+          <button>TBC</button>
+        </Link>
+        <Link to="Third">
+          <button>TBC</button>
+        </Link>
+      </div>
     </div>
   )
 }

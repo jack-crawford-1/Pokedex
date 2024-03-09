@@ -2,18 +2,18 @@ import { Link } from 'react-router-dom'
 
 function Generations() {
   return (
-    <div>
-      <h2>Generations</h2>
-      <button>
-        <Link to="/">Home</Link>
-      </button>
-      <button>
-        <Link to="/Generations/gen-one"> Generation 1</Link>
-      </button>
+    <div className="generations">
+      <h2>Pokémon Regions</h2>
 
-      <button>
-        <Link to="/Generations/gen-two"> Generation 2</Link>
-      </button>
+      <Link to="/">
+        <button>Home</button>
+      </Link>
+      <Link to="/Generations/gen-one">
+        <button>Kanto</button>
+      </Link>
+      <Link to="/Generations/gen-two">
+        <button>Johto</button>
+      </Link>
     </div>
   )
 }

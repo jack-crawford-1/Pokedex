@@ -30,19 +30,22 @@ function GenOneNames() {
 
   return (
     <>
-      <button>
-        <Link to="/">Home</Link>
-      </button>
-      <h2>Pokémon in {pokemonByGeneration.main_region.name}:</h2>
-      <ul>
-        {pokemonByGeneration.pokemon_species.map((p) => (
-          <li key={p.url}>
-            <Link to={`/generations/gen-one/names/pokemon/${p.name}`}>
-              {p.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div className="generations genOne">
+        <Link to="/">
+          <button>Home</button>
+        </Link>
+        <h2>Pokémon in {pokemonByGeneration.main_region.name}:</h2>
+        <h3>click on a Pokèmon name below to see specific info</h3>
+        <ul>
+          {pokemonByGeneration.pokemon_species.map((p) => (
+            <li key={p.url}>
+              <Link to={`/generations/gen-one/names/pokemon/${p.name}`}>
+                {p.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   )
 }

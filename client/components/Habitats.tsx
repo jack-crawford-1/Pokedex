@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { fetchPokemonByHabitat } from '../apis/Pokemon'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 type Params = {
   habitatName: string
@@ -32,9 +32,12 @@ function Habitats() {
     return <p>loading</p>
   }
   return (
-    <div>
+    <div className="generations habitats">
+      <Link to="/">
+        <button>Home</button>
+      </Link>
       <h1>{pokemonByHabitat.name}</h1>
-      <h2>Names by language</h2>
+      <h2>Names in different languages</h2>
       <ul>
         {pokemonByHabitat.names.map((habitatName) => (
           <li key={habitatName.name}>{habitatName.name}</li>

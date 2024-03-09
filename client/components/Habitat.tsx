@@ -21,8 +21,11 @@ function Habitat() {
   }
 
   return (
-    <div>
-      <h1>List of Habitats</h1>
+    <div className="generations genOne">
+      <Link to="/">
+        <button>Home</button>
+      </Link>
+      <h1 className="habitats">List of Habitats</h1>
       <ul>
         {habitats.map((habitat) => (
           <li key={habitat.name}>

@@ -139,6 +139,7 @@ ul {
 .homepage h1 {
   font-size: 5rem;
   text-align: left;
+  color: #3c5aa6;
 }
 
 .homepage h2 {
@@ -149,6 +150,10 @@ ul {
   margin-bottom: 70px;
 }
 
+.generations h1 {
+  color: #3c5aa6;
+}
+
 .generations h2 {
   font-size: 3rem;
   text-align: left;
@@ -156,6 +161,7 @@ ul {
   margin-top: 50px;
   margin-bottom: 70px;
   text-transform: capitalize;
+  color: #3c5aa6;
 }
 
 .generations p {
@@ -166,6 +172,7 @@ ul {
 .generations h3 {
   font-size: 1.4rem;
   margin-left: -120px;
+  color: #3c5aa6;
 }
 
 .homepage a,
@@ -214,4 +221,28 @@ ul {
 
 .getOne h2 {
   margin-top: 210px;
+}
+
+.habitats {
+  line-height: 2rem;
+  font-family: monospace;
+}
+
+.habitats li {
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 1.1rem;
+}
+
+.habitats h1 {
+  font-size: 4rem;
+  color: #3c5aa6;
+}
+
+.habitats h2 {
+  font-size: 2rem;
+  margin-bottom: 35px;
+}
+
+.habitats p {
 }

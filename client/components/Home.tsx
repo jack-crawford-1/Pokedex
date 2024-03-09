@@ -6,14 +6,9 @@ function Home() {
       <h1>Pokèdex</h1>
       <h2>Using React Query and the Pokè API</h2>
       <div className="gen-btn">
-        <Link to="/">
-          <button>Home</button>
-        </Link>
-
         <Link to="/Generations">
           <button>Regions</button>
         </Link>
-
         <Link to="Second">
           <button>TBC</button>
         </Link>

@@ -14,6 +14,7 @@ import GenTwo from './components/GenTwo'
 import GenTwoNames from './components/GenTwoNames'
 import GenOneTypes from './components/GenOneTypes'
 import GenTwoLocations from './components/GenTwoTypes'
+import PokemonDetails from './components/PokemonDetails'
 
 const router = createBrowserRouter(
   createRoutesFromElements([
@@ -23,7 +24,14 @@ const router = createBrowserRouter(
       <Route path="/generations" element={<Generations />} />
 
       <Route path="/generations/gen-one" element={<GenOne />} />
+
       <Route path="/generations/gen-one/names/:id" element={<GenOneNames />} />
+
+      <Route
+        path="/generations/gen-one/names/pokemon/:pokemonName"
+        element={<PokemonDetails />}
+      />
+
       <Route path="/generations/gen-one/types/:id" element={<GenOneTypes />} />
 
       <Route path="/generations/gen-two" element={<GenTwo />} />

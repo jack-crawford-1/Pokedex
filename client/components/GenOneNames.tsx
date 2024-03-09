@@ -4,7 +4,6 @@ import { useQuery } from '@tanstack/react-query'
 
 function GenOneNames() {
   const { id } = useParams()
-  // console.log(id)
 
   if (id === undefined) {
     return <p>No ID provided</p>
@@ -29,8 +28,6 @@ function GenOneNames() {
     return <p>Loading...</p>
   }
 
-  console.log(pokemonByGeneration.types)
-
   return (
     <>
       <button>
@@ -40,7 +37,9 @@ function GenOneNames() {
       <ul>
         {pokemonByGeneration.pokemon_species.map((p) => (
           <li key={p.url}>
-            <Link to={`/pokemon/${p.name}`}>{p.name}</Link>
+            <Link to={`/generations/gen-one/names/pokemon/${p.name}`}>
+              {p.name}
+            </Link>
           </li>
         ))}
       </ul>

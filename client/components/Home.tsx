@@ -9,8 +9,8 @@ function Home() {
         <Link to="/Generations">
           <button>Regions</button>
         </Link>
-        <Link to="Second">
-          <button>TBC</button>
+        <Link to="Habitats">
+          <button>Habitats</button>
         </Link>
         <Link to="Third">
           <button>TBC</button>

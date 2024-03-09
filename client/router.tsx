@@ -5,7 +5,8 @@ import {
   Route,
 } from 'react-router-dom'
 import Generations from './components/Generations'
-import Second from './components/Second'
+import Habitat from './components/Habitat'
+import Habitats from './components/Habitats'
 import Third from './components/Third'
 import Home from './components/Home'
 import GenOne from './components/GenOne'
@@ -41,7 +42,10 @@ const router = createBrowserRouter(
         element={<GenTwoLocations />}
       />
 
-      <Route path="/second" element={<Second />} />
+      {/* <Route path="/habitats" element={<Habitats />} /> */}
+      <Route path="/habitats" Component={Habitat} />
+      <Route path="/habitats/:name" Component={Habitats} />
+
       <Route path="/third" element={<Third />} />
       {/* </Route> */}
     </>,

@@ -1,11 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.outer-container {
+  width: 100%;
+  background-color: #ff001eca;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .pokemon-container {
-  background-color: rgb(217, 216, 216);
+  background-color: #fffbfb;
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 40%;
+  min-width: 500px;
   font-family: monospace;
-  border: 10px solid red;
+  border: 2rem outset #c0ccff;
+  outline: 2.5rem solid #3c5aa6;
+  border-radius: 12px;
   border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .pokemon-btn {
@@ -28,18 +45,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(27, 27, 222);
+  background-color: #3c5aa6;
   border-radius: 10px;
 }
 
 .pokemon-name {
-  color: blue;
+  color: #3c5aa6;
   text-align: center;
   font-size: 2rem;
 }
 
 .pokemon-index {
-  color: blue;
+  color: #3c5aa6;
   text-align: center;
   font-size: 1.5rem;
 }
@@ -68,7 +85,7 @@ ul {
 }
 
 .types-heading {
-  color: blue;
+  color: #3c5aa6;
   font-size: 1.5rem;
   margin-bottom: -30px;
 }
@@ -86,7 +103,7 @@ ul {
 
 .abilities-heading {
   font-size: 1.5rem;
-  color: blue;
+  color: #3c5aa6;
   margin-bottom: -30px;
 }
 
@@ -103,7 +120,7 @@ ul {
 
 .moves-heading {
   font-size: 1.5rem;
-  color: blue;
+  color: #3c5aa6;
   margin-bottom: -30px;
 }
 

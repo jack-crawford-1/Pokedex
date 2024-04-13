@@ -3,9 +3,9 @@ import { useQuery } from '@tanstack/react-query'
 import { fetchPokemonByName } from '../apis/Pokemon.ts'
 
 export default function PokemonDetail() {
-  const { pokemonName } = useParams()
+  const { name } = useParams()
 
-  if (pokemonName === undefined) {
+  if (name === undefined) {
     return <p>Pokemon name not provided. Please specify a Pokemon.</p>
   }
 
@@ -14,8 +14,8 @@ export default function PokemonDetail() {
     isError,
     data: pokemon,
   } = useQuery({
-    queryKey: ['pokemon', pokemonName],
-    queryFn: async () => fetchPokemonByName(pokemonName),
+    queryKey: ['pokemon', name],
+    queryFn: async () => fetchPokemonByName(name),
   })
 
   if (isPending) {
@@ -24,6 +24,8 @@ export default function PokemonDetail() {
   if (isError) {
     return <p>Not working</p>
   }
+
+  const firstFiveMoves = pokemon.moves.slice(0, 5)
 
   return (
     <div className="outer-container">
@@ -34,10 +36,10 @@ export default function PokemonDetail() {
           </button>
         </div>
         <div className="pokemon-name">
-          <h1>{pokemonName}</h1>
+          <h1>{name}</h1>
         </div>
         <div className="pokemon-image">
-          <img src={pokemon.sprites.front_default} alt={pokemonName} />
+          <img src={pokemon.sprites.front_default} alt={name} />
         </div>
         <div className="pokemon-index">
           <h2>Index: {pokemon.id}</h2>
@@ -72,7 +74,7 @@ export default function PokemonDetail() {
           </div>
           <div className="moves-content">
             <ul>
-              {pokemon.moves.map((move) => (
+              {firstFiveMoves.map((move) => (
                 <li key={move.move.name}>{move.move.name}</li>
               ))}
             </ul>

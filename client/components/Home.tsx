@@ -1,21 +1,11 @@
-import { Link } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+import PokemonDetails from './PokemonDetails'
 
 function Home() {
   return (
     <div className="homepage">
-      <h1>Pokèdex</h1>
-      <h2>Using React Query and the Pokè API</h2>
-      <div className="gen-btn">
-        <Link to="/Generations">
-          <button>Regions</button>
-        </Link>
-        <Link to="Habitats">
-          <button>Habitats</button>
-        </Link>
-        <Link to="Third">
-          <button>TBC</button>
-        </Link>
-      </div>
+      <Outlet />
+      {/* <PokemonDetails /> */}
     </div>
   )
 }

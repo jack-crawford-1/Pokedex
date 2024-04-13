@@ -1,11 +1,10 @@
-import { Outlet } from 'react-router-dom'
-import logo from '../images/logo.png'
+import HomeImage from './HomeImage'
 
 function Home() {
   return (
     <div className="homepage">
-      <img src={logo} alt="Pokemon Logo" className="homepage-logo" />
-      <Outlet />
+      <HomeImage />
+      <p>click above to enter</p>
     </div>
   )
 }

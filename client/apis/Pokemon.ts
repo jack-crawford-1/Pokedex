@@ -19,14 +19,7 @@ export async function fetchPokemonByName(name: string) {
   return res.body as Pokemon
 }
 
-export async function fetchPokemonByHabitat(name: string) {
-  const res = await request.get(
-    `https://pokeapi.co/api/v2/pokemon-habitat/${name}`
-  )
-  return res.body as PokemonHabitat
-}
-
-export async function fetchAllHabitats() {
-  const res = await request.get(`https://pokeapi.co/api/v2/pokemon-habitat/`)
-  return res.body.results as Result[]
+export async function fetchPokemon() {
+  const res = await request.get(`https://pokeapi.co/api/v2/pokemon?limit=151`)
+  return res.body as Pokemon
 }

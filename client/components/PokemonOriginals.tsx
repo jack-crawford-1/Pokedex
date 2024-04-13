@@ -52,27 +52,21 @@ function PokemonOriginals() {
     return <p>No Pokémon data found.</p>
   }
   return (
-    <div className="pokemon-page">
-      <div className="generations genOne">
-        <h2>Pokémon in Kánto:</h2>
-        <ul>
-          {pokemonData.results.map((poke: Pokemon) => (
-            <Link to={`/pokemon/${poke.name}`} key={poke.name}>
-              <li>
-                {sprites[poke.name] ? (
-                  <img
-                    src={sprites[poke.name]}
-                    alt={`Sprite of ${poke.name}`}
-                  />
-                ) : (
-                  <span>Loading sprite...</span>
-                )}
-                {poke.name}
-              </li>
+    <div className="pokemon-page-container">
+      <ul>
+        {pokemonData.results.map((poke: Pokemon) => (
+          <li key={poke.name} className="pokemon-page-pokemon">
+            <Link to={`/pokemon/${poke.name}`}>
+              {sprites[poke.name] ? (
+                <img src={sprites[poke.name]} alt={`Sprite of ${poke.name}`} />
+              ) : (
+                <span>Loading sprite...</span>
+              )}
+              <p>{poke.name}</p>
             </Link>
-          ))}
-        </ul>
-      </div>
+          </li>
+        ))}
+      </ul>
       <div className="pokemon-details">
         <Outlet />
       </div>

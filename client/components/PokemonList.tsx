@@ -4,7 +4,7 @@ import { fetchPokemon } from '../apis/Pokemon'
 import { Pokemon } from '../../models/Pokemon'
 import { useState, useEffect } from 'react'
 
-function PokemonOriginals() {
+function PokemonList() {
   const { id } = useParams()
   const [sprites, setSprites] = useState<{ [key: string]: string }>({})
 
@@ -74,4 +74,4 @@ function PokemonOriginals() {
   )
 }
 
-export default PokemonOriginals
+export default PokemonList

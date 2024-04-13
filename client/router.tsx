@@ -5,13 +5,15 @@ import {
   Route,
 } from 'react-router-dom'
 import Home from './components/Home'
-import PokemonOriginals from './components/PokemonOriginals'
+import PokemonList from './components/PokemonList'
 import PokemonDetails from './components/PokemonDetails'
+import App from './components/App'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Home />}>
-      <Route path="pokemon" element={<PokemonOriginals />}>
+    <Route path="/" element={<App />}>
+      <Route index element={<Home />} />
+      <Route path="pokemon" element={<PokemonList />}>
         <Route path=":name" element={<PokemonDetails />} />
       </Route>
     </Route>

@@ -1,8 +1,9 @@
 function HomeImage() {
-  const imgSrc = 'client/images/blast.png'
+  const imgSrc =
+    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png'
 
   return (
-    <div className="home-image">
+    <div>
       <img src={imgSrc} alt="homepage pokemon" />
     </div>
   )

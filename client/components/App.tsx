@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import Header from './Header'
 
 function App() {
@@ -8,6 +8,11 @@ function App() {
         <Header />
       </div>
       <Outlet />
+      <span>
+        <Link to="/about">
+          <p className="home-text">About</p>
+        </Link>
+      </span>
     </>
   )
 }

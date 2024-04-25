@@ -8,6 +8,7 @@ import Home from './components/Home'
 import PokemonList from './components/PokemonList'
 import PokemonDetails from './components/PokemonDetails'
 import App from './components/App'
+import About from './components/About'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
       <Route path="pokemon" element={<PokemonList />}>
         <Route path=":name" element={<PokemonDetails />} />
       </Route>
+      <Route path="/about" element={<About />} />
     </Route>
   )
 )

@@ -1,26 +1,19 @@
 # Phase 1 Boilerplate
 
-## Packages Included
+# 
 
-- react
-- react-router-dom
-- @tanstack/react-query
-- vite
-- vitest
-- eslint
+This Pokedex application displays information about Pokemon using the Pokemon API. The application is built with React, utilizing tanstack/react-query for efficient data fetching and state management. Superagent is used to retrieve data from the API.
 
-## Setup
+# Technologies Used:
+* React
+* tanstack/react-query
+* Superagent
+* CSS
+* TypeScript
 
-- [ ] Clone this repo, navigate to it, install packages, and start the server with `npm run dev`
-  <details style="padding-left: 2em">
-    <summary>Tip</summary>
+##
 
-    ```sh
-    npm install
-    npm run dev
-    ```
-  </details>
 
----
+![alt text](image-1.png)
 
-[Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=boilerplate-phase1)
+![alt text](image.png)

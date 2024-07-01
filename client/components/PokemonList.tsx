@@ -1,19 +1,18 @@
-import { Link, useParams, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { fetchPokemon } from '../apis/Pokemon'
-import { Pokemon } from '../../models/Pokemon'
+import { Result } from '../../models/Pokemon'
 import { useState, useEffect } from 'react'
 
 function PokemonList() {
-  const { id } = useParams()
   const [sprites, setSprites] = useState<{ [key: string]: string }>({})
 
   const {
-    isPending,
+    isLoading,
     isError,
     data: pokemonData,
   } = useQuery({
-    queryKey: ['pokemon', id],
+    queryKey: ['pokemon'],
     queryFn: async () => fetchPokemon(),
   })
 
@@ -27,7 +26,7 @@ function PokemonList() {
         })
 
         const spritesData = await Promise.all(promises)
-        const newSprites = {}
+        const newSprites: { [key: string]: string } = {}
         spritesData.forEach((spriteData) => {
           if (spriteData.sprite) {
             newSprites[spriteData.name] = spriteData.sprite
@@ -40,7 +39,7 @@ function PokemonList() {
     }
   }, [pokemonData])
 
-  if (isPending) {
+  if (isLoading) {
     return <p>Loading...</p>
   }
 
@@ -51,12 +50,13 @@ function PokemonList() {
   if (!pokemonData) {
     return <p>No Pokémon data found.</p>
   }
+
   return (
-    <div className="pokemon-page-container">
+    <div className="pokemon-list-container">
       <ul>
-        {pokemonData.results.map((poke: Pokemon) => (
-          <li key={poke.name} className="pokemon-page-pokemon">
-            <Link to={`/pokemon/${poke.name}`}>
+        {pokemonData.results.map((poke: Result) => (
+          <li key={poke.name} className="pokemon-list-pokemon">
+            <Link to={`/${poke.name}`}>
               {sprites[poke.name] ? (
                 <img src={sprites[poke.name]} alt={`Sprite of ${poke.name}`} />
               ) : (
@@ -67,9 +67,6 @@ function PokemonList() {
           </li>
         ))}
       </ul>
-      <div className="pokemon-details">
-        <Outlet />
-      </div>
     </div>
   )
 }

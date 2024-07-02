@@ -159,3 +159,15 @@ body {
 .back-link a:hover {
   background-color: #054b96;
 }
+
+/* SMALL SCREENS */
+
+@media (max-width: 768px) {
+  .inner-container {
+    flex-direction: column;
+  }
+
+  .single-pokemon-image {
+    margin-bottom: 20px;
+  }
+}

@@ -19,6 +19,15 @@ export interface ApiLink {
   url: string
 }
 
+interface Stat {
+  base_stat: number
+  effort: number
+  stat: {
+    name: string
+    url: string
+  }
+}
+
 export interface Pokemon {
   name: string
   id: number
@@ -30,6 +39,10 @@ export interface Pokemon {
   moves: Array<Move>
   types: Array<TypeInfo>
   results: Result[]
+  stats: Stat[]
+  height: number
+  weight: number
+  held_items: Array<{ item: { name: string; url: string } }>
 }
 
 interface Ability {

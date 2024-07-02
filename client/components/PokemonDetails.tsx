@@ -68,6 +68,36 @@ export default function PokemonDetail() {
               ))}
             </ul>
           </div>
+          <div className="detail-section">
+            <h3>Stats</h3>
+            <ul className="stats-content">
+              {pokemon.stats.map((stat) => (
+                <li key={stat.stat.name}>
+                  {stat.stat.name}: {stat.base_stat}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="detail-section">
+            <h3>Attributes</h3>
+            <ul className="stats-content">
+              <li>Height: {pokemon.height} </li>
+              <li>Weight: {pokemon.weight}</li>
+            </ul>
+          </div>
+          <div className="detail-section">
+            <h3>Held Items</h3>
+            <ul className="held-items-content">
+              {pokemon.held_items.length > 0 ? (
+                pokemon.held_items.map((item, index) => (
+                  <li key={index}>{item.item.name}</li>
+                ))
+              ) : (
+                <li>No held items</li>
+              )}
+            </ul>
+          </div>
+
           <div className="back-link">
             <a href="/">back</a>
           </div>
